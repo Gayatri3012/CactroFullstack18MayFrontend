@@ -8,7 +8,8 @@ function VideoDetails({ videoId }) {
   const [description, setDescription] = useState('');
   const [message, setMessage] = useState('');
 
-  const token = process.env.TOKEN;
+  const token = process.env.REACT_APP_TOKEN;
+  console.log(token)
 
   useEffect(() => {
     fetch(`https://cactrofullstack18maybackend.onrender.com/video/${videoId}`)
