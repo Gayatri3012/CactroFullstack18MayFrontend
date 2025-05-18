@@ -7,7 +7,7 @@ import Notes from './Components/Notes';
 function App() {
 
   const videoId = process.env.VIDEO_ID; 
-
+  console.log(videoId)
 
   return (
     <div className="App">
