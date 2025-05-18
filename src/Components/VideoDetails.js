@@ -11,7 +11,7 @@ function VideoDetails({ videoId }) {
   const token = process.env.TOKEN;
 
   useEffect(() => {
-    fetch(`http://localhost:5000/video/${videoId}`)
+    fetch(`https://cactrofullstack18maybackend.onrender.com/video/${videoId}`)
       .then(res => res.json())
       .then(data => {
         setVideo(data);
@@ -24,7 +24,7 @@ function VideoDetails({ videoId }) {
     e.preventDefault();
     setMessage('');
 
-    const res = await fetch(`http://localhost:5000/video/${videoId}`, {
+    const res = await fetch(`https://cactrofullstack18maybackend.onrender.com/video/${videoId}`, {
       method: 'PATCH',
       headers: {
         'Content-Type': 'application/json',

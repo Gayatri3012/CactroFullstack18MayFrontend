@@ -11,7 +11,7 @@ function Comments({ videoId, accessToken }) {
 
   useEffect(() => {
     if (!accessToken) return;
-    fetch(`http://localhost:5000/comment/${videoId}`, {
+    fetch(`https://cactrofullstack18maybackend.onrender.com/comment/${videoId}`, {
       headers: {
         Authorization: `Bearer ${accessToken}`,
       },
@@ -63,7 +63,7 @@ function Comments({ videoId, accessToken }) {
       setComments([postedComment, ...comments]);
       setNewComment('');
 
-      await fetch('http://localhost:5000/event', {
+      await fetch('https://cactrofullstack18maybackend.onrender.com/event', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -134,7 +134,7 @@ function Comments({ videoId, accessToken }) {
 
       setReplyTexts(prev => ({ ...prev, [parentId]: '' }));
 
-      await fetch('http://localhost:5000/event', {
+      await fetch('https://cactrofullstack18maybackend.onrender.com/event', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -179,7 +179,7 @@ function Comments({ videoId, accessToken }) {
         )
       );
 
-      await fetch('http://localhost:5000/event', {
+      await fetch('https://cactrofullstack18maybackend.onrender.com/event', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
